@@ -13,7 +13,7 @@ $(function () {
     // 1.3 创建裁剪区域
     $image.cropper(options)
 
-    $('#upBtn').on('click', function (e) {
+    $('#upBtn').on('click', function () {
         $('#file').click();
     })
     $('#file').on('change', function (e) {
@@ -23,9 +23,9 @@ $(function () {
         }
         var newImgURL = URL.createObjectURL(fileList[0]);
         $image
-            .cropper('destroy')      // 销毁旧的裁剪区域
-            .attr('src', newImgURL)  // 重新设置图片路径
-            .cropper(options)        // 重新初始化裁剪区域
+            .cropper('destroy') // 销毁旧的裁剪区域
+            .attr('src', newImgURL) // 重新设置图片路径
+            .cropper(options) // 重新初始化裁剪区域
     })
     $('#conBtn').on('click', function () {
         var dataURL = $image

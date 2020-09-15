@@ -15,6 +15,7 @@ $(function () {
         }
     })
     $('.layui-form').on('submit', function (e) {
+        console.log($(this).serialize());
         e.preventDefault()
         $.ajax({
             method: 'POST',
@@ -31,4 +32,3 @@ $(function () {
         })
     })
 })
-
